@@ -151,21 +151,32 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">React Linkedin Login</h1>
-        </header>
+        <div className="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Simple Signin with Linkedin API</h1>
+            <p class="lead">A simple Authentic way of Signing in In Any App</p>
+          </div>
+        </div>
         <div className="App-body">
           {this.state.isAuthorized ? (
+            <div>
             <span>
-              <button onClick={this.linkedinLogout}>Linkedin Logout</button>
-              <button onClick={this.shareToLinkedin}>Share on Linkedin</button>
-            </span>
-          ) : (
-            <button onClick={this.linkedinAuthorize}>Linkedin Login</button>
-          )}
-          <button onClick={this.requestOAuthToken}>
+              <button className="btn btn-danger" onClick={this.linkedinLogout}>Logout of LinkedIn</button>
+              <button className="btn btn-warning" onClick={this.requestOAuthToken}>
             Request OAuth2.0 Token
           </button>
+            </span>
+            </div>
+          ) : (
+            <div>
+              <h2>Login To View Your Profile</h2>
+            <button className="btn btn-primary" onClick={this.linkedinAuthorize}> Login with LinkedIn</button>
+            <button className="btn btn-warning" onClick={this.requestOAuthToken}>
+            Request OAuth2.0 Token
+          </button>
+            </div>
+          )}
+
           {this.state.isAuthorized &&
             (
               <ProfileCard
