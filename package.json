@@ -20,5 +20,10 @@
     "morgan": "^1.9.1",
     "serve-favicon": "^2.5.0",
     "superagent": "^4.0.0-beta.5"
+  },
+  "engines": {
+    "node": "10.10.0",
+    "yarn": "1.9.4"
   }
+
 }
