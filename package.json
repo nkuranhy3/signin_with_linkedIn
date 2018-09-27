@@ -4,7 +4,8 @@
   "description": "simple signin with linkedin react app",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
   },
   "repository": "https://github.com/nkuranhy3/signin_with_linkedIn.git",
   "author": "Alfred Boateng <programmingwithalfred@gmail.com>",
